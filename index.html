@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Vincent James Christaldi II">
+    <meta name="application-name" content="Official Christmas Countdown">
+    <meta name="description" content="A basic Christmas countdown.">
+    <meta name="keywords" content="Xmas, Christmas, countdown, 12/25">
+    <title>Christmas Countdown</title>
+   
+
+    <!-- CSS -->
+    <style media="screen">
+      body {
+        @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+        background-color: #e30000;
+        font-family: 'Fuzzy Bubbles', cursive;
+        
+
+    </style>
+
+    <!-- JS -->
+    <script type="text/javascript">
+
+      /* Variables */
+      var date = new Date();
+      var month = Math.abs(date.getMonth() - 11);
+      var day = date.getDate();
+      var hour = (Math.abs(date.getHours() - 23) + 8);
+      var minute = (Math.abs(date.getMinutes() - 59) + 30);
+      var second = Math.abs(date.getSeconds() - 59);
+      var milliseconds = Math.abs(date.getMilliseconds() - 999);
+
+      if (date.getMonth() == 0) {   // January
+        var days = day;
+      }
+      if (date.getMonth() == 1) {  // Febuary
+        var days = day + 31;
+      }
+      if (date.getMonth() == 2) {  // March
+        var days = day + 59;
+      }
+      if (date.getMonth() == 3) {  // April
+        var days = day + 90;
+      }
+      if (date.getMonth() == 4) {  // May
+        var days = day + 120;
+      }
+      if (date.getMonth() == 5) {  // June
+        var days = day + 151;
+      }
+      if (date.getMonth() == 6) { // July
+        var days = day + 181;
+      }
+      if (date.getMonth() == 7) { // August
+        var days = day + 212;
+      }
+      if (date.getMonth() == 8) { // September
+        var days = day + 243;
+      }
+      if (date.getMonth() == 9) { // October
+        var days = day + 273;
+      }
+      if (date.getMonth() == 10) { // November
+        var days = day + 304;
+      }
+      if (date.getMonth() == 11) { // December
+        var days = day + 334;
+      }
+
+      days = Math.abs(days - 358);
+      var total_hours = (days * 23) + hour;
+      var total_minutes = (total_hours * 59) + minute;
+      var total_seconds = (total_minutes * 59) + second;
+      var total_milli = (total_seconds * 999) + milliseconds;
+      var total_micro = (total_seconds * 999999) + milliseconds;
+
+      </script>
+      <div style="text-align: center;">
+        <script>
+          document.write("<span style=\"color:#30e685;font-size:2em;font-family:Lucida Handwriting;\">" + month + " months,<br> " + days + " days,<br> " + hour + " hours,<br> " + minute + " minutes, <br>" +  second + " seconds, and<br> " + milliseconds + " milliseconds until Christmas 2021.");
+          </script>
+        <br>
+        <br>
+        <script>
+          document.write("" + total_hours + " total hours until Christmas.");
+        </script>
+        <br>
+        <script>
+          document.write("" + total_minutes + " total minutes until Christmas.");
+        </script>
+        <br>
+        <script>
+          document.write("" + total_seconds + " total seconds until Christmas.");
+        </script>
+        <br>
+        <script>
+          document.write("" + total_milli + " total milliseconds until Christmas.");
+        </script>
+        <br>
+        <script>
+          document.write("Until Christmas 2021, 8:30 AM");
+        </script>
+      </div>
+      <script>
+      setTimeout(function(){
+       window.location.reload(1);
+    }, 1);
+  
+    </script>
+
+  </head>
+  <body>
+
+
+
+  </body>
+</html>
